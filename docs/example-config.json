@@ -1,0 +1,182 @@
+{
+  "format": "lumen-config",
+  "version": 1,
+  "description": "Example: a small exam-prep and fitness setup",
+  "categories": [
+    {
+      "ref": "cat-study",
+      "name": "Study",
+      "color": "#7c9cff"
+    },
+    {
+      "name": "Health",
+      "color": "#34d399"
+    }
+  ],
+  "tags": [
+    {
+      "name": "exam"
+    },
+    {
+      "name": "quick-win",
+      "color": "#f59e0b"
+    }
+  ],
+  "projects": [
+    {
+      "ref": "proj-thesis",
+      "name": "Thesis",
+      "description": "Final-year thesis project",
+      "deadline": "2027-03-31",
+      "color": "#c084fc",
+      "columns": [
+        "Backlog",
+        "Writing",
+        {
+          "name": "Submitted",
+          "done": true
+        }
+      ],
+      "milestones": [
+        {
+          "title": "First draft",
+          "date": "2027-01-15"
+        },
+        {
+          "title": "Final submission",
+          "date": "2027-03-31"
+        }
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "ref": "subj-bio",
+      "name": "Biology",
+      "color": "#34d399",
+      "examDate": "2027-02-10",
+      "examTime": "09:30",
+      "chapters": [
+        {
+          "title": "Cell structure",
+          "plannedMin": 120,
+          "topics": [
+            "Organelles",
+            {
+              "title": "Membrane transport",
+              "done": false
+            }
+          ]
+        },
+        {
+          "title": "Genetics",
+          "plannedMin": 180,
+          "topics": [
+            "Mendel",
+            "DNA replication"
+          ]
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "ref": "t-outline",
+      "title": "Write thesis outline",
+      "description": "Headings and a one-line summary per chapter.",
+      "priority": "high",
+      "category": "Study",
+      "tags": [
+        "quick-win"
+      ],
+      "project": "proj-thesis",
+      "column": "Writing",
+      "startDate": "2026-11-01",
+      "deadline": "2026-11-10",
+      "deadlineTime": "17:00",
+      "estimateMin": 90,
+      "subtasks": [
+        "Collect sources",
+        {
+          "title": "Draft headings",
+          "done": false
+        }
+      ],
+      "focus": {
+        "enabled": true,
+        "durationMin": 45
+      }
+    },
+    {
+      "ref": "t-revise",
+      "title": "Revise Cell structure",
+      "priority": "medium",
+      "category": "Study",
+      "tags": [
+        "exam"
+      ],
+      "subject": "subj-bio",
+      "chapter": "Cell structure",
+      "scheduledDate": "2026-11-12",
+      "scheduledTime": "18:00",
+      "estimateMin": 60
+    },
+    {
+      "title": "Weekly review",
+      "priority": "low",
+      "scheduledDate": "2026-11-15",
+      "scheduledTime": "10:00",
+      "estimateMin": 30,
+      "recurrence": {
+        "freq": "weekly",
+        "interval": 1,
+        "byWeekday": [
+          0
+        ],
+        "count": 12
+      }
+    }
+  ],
+  "notes": [
+    {
+      "title": "Thesis reading list",
+      "body": "# Reading list\n\n- Paper A\n- Paper B\n",
+      "pinned": true,
+      "category": "Study",
+      "task": "t-outline",
+      "project": "proj-thesis"
+    }
+  ],
+  "habits": [
+    {
+      "name": "Morning walk",
+      "description": "20 minutes outside",
+      "color": "#34d399",
+      "schedule": {
+        "type": "daily"
+      },
+      "startDate": "2026-11-01",
+      "reminderTime": "07:00"
+    },
+    {
+      "name": "Gym",
+      "color": "#fb7185",
+      "schedule": {
+        "type": "days",
+        "days": [
+          1,
+          3,
+          5
+        ]
+      },
+      "startDate": "2026-11-01"
+    },
+    {
+      "name": "Read",
+      "schedule": {
+        "type": "weekly",
+        "perWeek": 4
+      }
+    }
+  ]
+}

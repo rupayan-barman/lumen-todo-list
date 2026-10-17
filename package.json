@@ -1,0 +1,19 @@
+{
+  "name": "lumen-planner",
+  "version": "1.0.0",
+  "description": "Lumen - an offline-first, glassmorphism productivity workspace (tasks, focus timers, calendar, notes, habits, projects, study planner).",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "build": "node tools/build-precache.mjs",
+    "gen:wallpapers": "node tools/gen-wallpapers.mjs",
+    "gen:icons": "node tools/gen-icons.mjs",
+    "test": "node --test \"tests/unit/*.test.mjs\"",
+    "test:e2e": "node tests/e2e/run.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
