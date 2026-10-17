@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-mode="dark" data-motion="system" data-effects="full" data-sidebar="expanded" data-anim="off" data-zen="off" data-focus="off">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumen</title>
+  <meta name="description" content="Lumen: an offline-first productivity workspace for tasks, focus timers, notes, habits, projects and study.">
+  <meta name="theme-color" content="#070b1a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div id="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-image"></div><div class="bg-overlay"></div><div class="bg-vignette"></div><div class="bg-rgb"></div></div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="live" class="sr-only" role="status" aria-live="polite"></div>
+  <div id="root" class="app"><div class="loading" role="status"><span class="spinner" aria-hidden="true"></span><span>Loading Lumen…</span></div></div>
+  <noscript><p style="padding:2rem">Lumen needs JavaScript to run.</p></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

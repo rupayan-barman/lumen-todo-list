@@ -1,0 +1,39 @@
+/* Design tokens. These are DEFAULTS (dark "Midnight"); js/services/theme.js overwrites them on <html>
+   for the chosen theme/mode/glass settings. Components must only ever read these variables. */
+:root {
+  color-scheme: dark;
+  --bg: #070b1a; --bg-2: #141b3a;
+  --glass-rgb: 24 32 68; --glass-alpha: 0.58; --glass-alpha-strong: 0.9;
+  --surface-solid: #182044;
+  --border-rgb: 141 162 255; --border-alpha: 0.22;
+  --text: #eaedfb; --text-muted: #b6bde0; --text-faint: #9aa3cf;
+  --primary: #8aa4ff; --primary-raw: #8aa4ff; --primary-rgb: 138 164 255; --on-primary: #0b1020;
+  --accent: #c4a1ff; --accent-rgb: 196 161 255; --on-accent: #0b1020;
+  --danger: #ff9a9a; --warning: #ffd166; --success: #6ee7a1; --info: #8bd3ff;
+  --focus-ring: #dfe6ff;
+  --shadow-color: 0 0 0; --shadow-k: 0.4; --shadow-alpha: 0.22; --highlight-alpha: 0.077; --glow-alpha: 0.055;
+  --blur: 18px; --blur-strong: 25px;
+  --radius: 14px; --radius-sm: 8px; --radius-lg: 21px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-scale: 1; --space: 1;
+
+  /* derived, never set by JS */
+  --surface: rgb(var(--glass-rgb) / var(--glass-alpha));
+  --surface-strong: rgb(var(--glass-rgb) / var(--glass-alpha-strong));
+  --surface-inner: rgb(var(--glass-rgb) / calc(var(--glass-alpha) * 0.55));
+  --surface-hover: rgb(var(--primary-rgb) / 0.14);
+  --surface-active: rgb(var(--primary-rgb) / 0.24);
+  --border: rgb(var(--border-rgb) / var(--border-alpha));
+  --border-strong: rgb(var(--border-rgb) / calc(var(--border-alpha) + 0.25));
+  --shadow: 0 10px 34px rgb(var(--shadow-color) / var(--shadow-alpha)), 0 2px 6px rgb(var(--shadow-color) / calc(var(--shadow-alpha) * 0.5));
+  --glow: 0 0 22px rgb(var(--primary-rgb) / var(--glow-alpha));
+  --highlight: inset 0 1px 0 rgb(255 255 255 / var(--highlight-alpha));
+  --s-1: calc(4px * var(--space)); --s-2: calc(8px * var(--space)); --s-3: calc(12px * var(--space));
+  --s-4: calc(16px * var(--space)); --s-5: calc(24px * var(--space)); --s-6: calc(32px * var(--space));
+  --fs: calc(15px * var(--font-scale));
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 120ms; --t-med: 200ms;
+  --sidebar-w: 248px; --sidebar-w-collapsed: 68px; --topbar-h: 58px;
+}
+:root[data-motion="reduced"] { --t-fast: 0ms; --t-med: 0ms; }
+@media (prefers-reduced-motion: reduce) { :root[data-motion="system"] { --t-fast: 0ms; --t-med: 0ms; } }
